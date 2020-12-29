@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - 3200:3200
+    volumes:
+      - ./server:/hello-docker
+    command: nodemon src/index.js
