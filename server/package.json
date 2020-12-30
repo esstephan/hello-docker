@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "hello hello",
   "main": "index.js",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix .",
+    "pretest": "echo \"Running pretest lint\" && eslint --ignore-path ../.gitignore ."
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,20 @@
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "fast-diff": "^1.2.0",
+    "prettier": "^2.2.1",
+    "prettier-linter-helpers": "^1.0.0"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true
   }
 }
