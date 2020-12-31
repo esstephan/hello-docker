@@ -46,9 +46,9 @@ jobs:
         uses: docker/build-push-action@v2
         with: 
           context: ./server
-          file: ./Dockerfile
+          file: ./server/Dockerfile
           push: true
-          tags:  esstephan/hello-docker:latest
+          tags:  estephan2/hello-docker:latest
         
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
